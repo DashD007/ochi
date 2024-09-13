@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
+import ochi from "../assets/ochi.jpg"
 const LandingPage = () =>{
     
     return (
         <div data-scroll data-scroll-section data-scroll-speed="-.3" className="w-full h-screen pt-1">
             <div className="landingText mt-[20vh] pl-12 relative">
                 {["We create","Eye-Opening","Presentations"].map((item,index) => {
-                    return (<div key={index}>{index === 1 && <motion.div initial={{width:0}} animate={{width:'9vw'}} transition={{ease:[0.76, 0, 0.24, 1],delay:.4,duration:1}} className={`w-[9vw] h-[6vw] rounded-md bg-cover  bg-[url('ochi.jpg')] inline-block mr-[1vw]`}></motion.div>}<h1 className="text-[9vw] font-['founder'] leading-[7vw] uppercase text-white inline ">{item}</h1></div>)
+                    return (<div key={index}>{index === 1 && <motion.div initial={{width:0}} animate={{width:'9vw'}} transition={{ease:[0.76, 0, 0.24, 1],delay:.4,duration:1}} className={`w-[9vw] h-[6vw] rounded-md overflow-hidden inline-block mr-[1vw]`}>
+                        <img className="w-full h-full object-cover" src={ochi}/></motion.div>}<h1 className="text-[9vw] font-['founder'] leading-[7vw] uppercase text-white inline ">{item}</h1></div>)
                 })}
             </div>
             <div className="w-full border-t-[1px] mt-24 border-zinc-700 py-3 px-12 flex items-center justify-between">

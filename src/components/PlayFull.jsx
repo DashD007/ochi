@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react"
-
+import bg from "../assets/playfullBG.jpg";
 // import bg from "../assets/playfullBG.jpg";
 const PlayFull = () => {
     const [rotate, setRotate] = useState(0);
@@ -18,7 +18,8 @@ const PlayFull = () => {
         })
     },[])
   return (
-    <div  data-scroll data-scroll-section data-scroll-speed=".3" className={`w-full h-screen bg-[url('playfullBG.jpg')] bg-cover flex justify-center `}>
+    <div  data-scroll data-scroll-section data-scroll-speed=".3" className={`w-full h-screen flex justify-center relative `}>
+        <img src={bg} className="absolute -z-10 w-full h-full object-cover"/>
         <div  className="w-1/3 flex justify-center gap-10 mt-8">
             <div className="h-[15vw] w-[15vw] rounded-full bg-[#F6F6F6] flex items-center justify-center">
                 <div className="h-[8vw] w-[8vw] rounded-full bg-[#212121] flex items-center">
